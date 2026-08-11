@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miles Fitzgerald</title>
+<meta name="description" content="Miles Fitzgerald — Product Design Director at Microsoft. AI agents, design direction, and validated ground truth for AI evaluation in expert-judgment domains.">
+<meta name="theme-color" content="#E3E4DE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Palette + layout: banjosoundscapes — greige monochrome, vast
+   whitespace, sparse edge-anchored labels, centered statements.
+   Type: Futura®100 — one geometric family, light to black.
+   ============================================================ */
+:root{
+  --paper:#E3E4DE;
+  --ink:#141414;
+  --muted:#83867D;
+  --rule:#C9CBC2;
+  --accent:#D14B1F;
+  --pad:clamp(20px,4.5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Jost",sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.6;
+}
+a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:4px}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--pad)}
+
+.label{
+  font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink);
+}
+.label--muted{color:var(--muted)}
+
+/* ---------- hero: full viewport, sparse ---------- */
+.hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  padding:clamp(18px,3vw,36px) 0;
+  margin-bottom:clamp(70px,11vw,140px);
+}
+.hero-top{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+}
+.hero-top span{flex:1}
+.hero-top span:nth-child(2){text-align:center}
+.hero-top span:nth-child(3){text-align:right}
+.hero-mid{text-align:center;margin:auto 0}
+.hero-mid h1{
+  margin:0;
+  font-weight:800;text-transform:uppercase;
+  font-size:clamp(52px,13.5vw,185px);
+  line-height:.9;letter-spacing:.005em;
+}
+.h-hv{display:block}
+.h-lt{
+  display:block;
+  font-weight:300;
+  font-size:clamp(18px,3vw,40px);
+  letter-spacing:.16em;line-height:1;
+  margin-bottom:clamp(14px,2.4vw,32px);
+}
+.tm{
+  font-size:.16em;font-weight:500;letter-spacing:.05em;
+  vertical-align:super;line-height:0;margin-left:.1em;
+}
+.arr{display:inline-block;animation:nudge 2s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.hero-bot{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:24px;
+}
+.hero-bot .tag{
+  margin:0;
+  font-weight:300;font-size:clamp(17px,2.1vw,23px);
+  max-width:30ch;line-height:1.4;color:var(--ink);
+}
+/* ---------- sections: heavy rules, heavy caps ---------- */
+section.band{padding:0 0 clamp(90px,13vw,160px)}
+.sec-head{
+  border-top:4px solid var(--ink);
+  padding-top:14px;
+  margin-bottom:clamp(36px,6vw,64px);
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+}
+.sec-head h2{
+  margin:0;
+  font-weight:800;text-transform:uppercase;
+  font-size:clamp(26px,4vw,44px);line-height:1;letter-spacing:.01em;
+}
+.lede{
+  font-weight:300;font-size:clamp(21px,2.6vw,28px);line-height:1.35;
+  max-width:52ch;margin:0 0 20px;
+}
+p{max-width:64ch}
+.body-muted{color:var(--muted)}
+
+/* ---------- work timeline: horizontal, on a line ---------- */
+.timeline{
+  margin-top:clamp(44px,7vw,72px);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.tl{
+  position:relative;min-width:0;
+  border-top:2px solid var(--ink);
+  padding:clamp(16px,3.5vw,40px) clamp(10px,3vw,64px) 0 0;
+}
+.tl:last-child{padding-right:0}
+.tl::before{
+  content:"";position:absolute;top:-6px;left:0;
+  width:clamp(8px,1.4vw,12px);height:clamp(8px,1.4vw,12px);
+  border-radius:50%;background:var(--ink);
+}
+.tl-year{
+  display:block;
+  font-weight:300;font-size:clamp(18px,3.4vw,44px);line-height:1;
+  margin-bottom:clamp(8px,1.8vw,16px);
+}
+.tl h3{
+  margin:0;
+  font-weight:800;text-transform:uppercase;
+  font-size:clamp(13px,2.2vw,30px);line-height:1;letter-spacing:.01em;
+}
+.tl .dur{
+  margin:8px 0 12px;
+  font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);
+}
+.tl p.body{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+@media (max-width:640px){
+  .tl .dur,.tl p.body{display:none}
+  .tl::before{top:-5px}
+}
+
+/* ---------- portfolio list ---------- */
+.portfolio{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0 clamp(24px,4vw,48px);
+  margin-top:clamp(40px,6vw,64px);
+}
+.pf{border-top:1px solid var(--rule);padding:16px 0 20px}
+.pf b{
+  display:block;font-weight:700;text-transform:uppercase;
+  letter-spacing:.03em;font-size:15px;
+}
+.pf span{
+  font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* ---------- method ---------- */
+.steps{list-style:none;margin:0;padding:0}
+.steps li{
+  padding:clamp(24px,3.5vw,36px) 0;
+  border-top:1px solid var(--ink);
+}
+.steps h3{
+  margin:0 0 4px;
+  font-weight:700;text-transform:uppercase;
+  font-size:clamp(16px,2vw,20px);letter-spacing:.06em;
+}
+.steps p{margin:0;color:var(--muted);font-size:14px;max-width:58ch}
+
+/* ---------- angel ---------- */
+.cols{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,80px)}
+.stack{display:grid;grid-template-columns:auto 1fr;gap:0 24px;margin:0;font-size:14px;align-content:start}
+.stack dt{
+  font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);padding:12px 0;border-top:1px solid var(--rule);
+}
+.stack dd{margin:0;padding:12px 0;border-top:1px solid var(--rule)}
+
+/* ---------- links ---------- */
+.linklist{list-style:none;margin:0;padding:0}
+.linklist li{border-top:1px solid var(--ink)}
+.linklist li:last-child{border-bottom:1px solid var(--ink)}
+.linklist a{
+  display:grid;grid-template-columns:clamp(80px,12vw,140px) 1fr auto;
+  gap:20px;align-items:center;
+  padding:clamp(18px,2.6vw,26px) 0;
+  text-decoration:none;color:var(--ink);
+  transition:padding-left .15s ease,color .15s ease;
+}
+.ll-tag{
+  font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);
+}
+.ll-title{
+  font-weight:700;text-transform:uppercase;
+  font-size:clamp(17px,2.6vw,26px);line-height:1.1;letter-spacing:.02em;
+}
+.ll-arrow{
+  font-weight:300;font-size:clamp(20px,2.8vw,28px);
+  transition:transform .15s ease;
+}
+.linklist a:hover,.linklist a:focus-visible{color:var(--accent);padding-left:14px}
+.linklist a:hover .ll-arrow{transform:translateX(8px)}
+.linklist a:hover .ll-tag{color:var(--accent)}
+
+/* ---------- contact: centered, banjo-calm ---------- */
+.contact{
+  text-align:center;
+  padding:clamp(110px,18vw,220px) 0 clamp(60px,8vw,90px);
+}
+.contact .pitch{
+  margin:0 auto 28px;
+  font-weight:300;font-size:clamp(17px,2.1vw,22px);
+  max-width:36ch;line-height:1.45;
+}
+.contact a.mail{
+  display:inline-block;
+  font-weight:800;text-transform:uppercase;
+  font-size:clamp(24px,4.6vw,56px);letter-spacing:.01em;line-height:1;
+  color:var(--ink);text-decoration:none;
+  border-bottom:4px solid var(--ink);padding-bottom:10px;
+  transition:color .15s ease,border-color .15s ease;
+  word-break:break-all;
+}
+.contact a.mail:hover,.contact a.mail:focus-visible{
+  color:var(--accent);border-color:var(--accent);
+}
+.elsewhere{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:14px 36px;
+  margin:clamp(40px,6vw,56px) 0 0;padding:0;list-style:none;
+}
+.elsewhere a{
+  font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  text-decoration:none;color:var(--muted);
+}
+.elsewhere a:hover{color:var(--accent)}
+footer{
+  margin-top:clamp(70px,10vw,110px);
+  padding:18px 0 28px;
+  border-top:4px solid var(--ink);
+  display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between;
+  font-size:11px;font-weight:500;color:var(--muted);
+  letter-spacing:.18em;text-transform:uppercase;
+}
+
+@media (max-width:720px){
+  .cols{grid-template-columns:1fr}
+  .portfolio{grid-template-columns:1fr 1fr}
+  .hero-top span:nth-child(2){display:none}
+  .linklist a{grid-template-columns:1fr auto}
+  .ll-tag{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-top">
+      <span class="label">Miles Fitzgerald</span>
+      <span class="label label--muted">Product design direction</span>
+      <span class="label label--muted">Taking enquiries</span>
+    </div>
+    <div class="hero-mid">
+      <h1>
+        <span class="h-lt">Member of the</span>
+        <span class="h-hv">billion</span>
+        <span class="h-hv">users club<sup class="tm">™</sup></span>
+      </h1>
+    </div>
+    <div class="hero-bot">
+      <p class="tag">You're losing money and customers because your product sucks and you have no idea why. <a href="mailto:hello@milesfitzgerald.com">Let's chat.</a></p>
+      <span class="label label--muted">Scroll <span class="arr">↓</span></span>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="sec-head">
+      <h2>Work</h2>
+    </div>
+    <p class="lede">I'm Miles Fitzgerald — Product Design Director at Microsoft, where I lead the incubation of AI agents on the Excel design team.</p>
+    <p class="body-muted">I've spent my career designing how people work: Spotify, Condé Nast, Adobe, and a decade of Microsoft products. The through-line is the problem I keep coming back to — figuring out what experts actually mean by "good," then making it concrete enough to build and measure against.</p>
+    <div class="timeline">
+      <div class="tl">
+        <span class="tl-year">2011</span>
+        <div>
+          <h3>Startup</h3>
+          <p class="dur">Product design — first chapter</p>
+          <p class="body">Cut my teeth designing product at startup speed — small team, direct contact with users, shipping constantly.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <span class="tl-year">2014</span>
+        <div>
+          <h3>Spotify</h3>
+          <p class="dur">Product design</p>
+          <p class="body">Designing for music at global scale, alongside work with Condé Nast and Adobe.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <span class="tl-year">2015</span>
+        <div>
+          <h3>Founder</h3>
+          <p class="dur">Founding member — raised $1M</p>
+          <p class="body">Founding member of a venture-backed startup; helped raise a $1M round and learned what it takes to build a product from zero.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <span class="tl-year">2017 —</span>
+        <div>
+          <h3>Microsoft</h3>
+          <p class="dur">Outlook → Office → Loop → Excel — building software at scale</p>
+          <p class="body">From Outlook and the evolution of Office — the single-line ribbon, Dark Mode, Fluent, mobile and dual-screen experiences — through leading Loop's go-to-market design team, to today: Design Director on Excel, leading the incubation of AI agents. Wrote about the open design approach for <a href="https://medium.com/microsoft-design/opendesignoutlook-7e0f4e591082">Microsoft Design on Medium</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="sec-head">
+      <h2>The problem</h2>
+    </div>
+    <p class="lede">In expert-judgment domains — legal review, clinical documentation, financial analysis, design critique — teams ship agents they cannot measure.</p>
+    <p class="body-muted">The usual substitutes don't hold. LLM-as-judge inherits the same blind spots as the system under test. Crowdsourced labels can't reach the judgment you're trying to automate. And a rubric written in a planning doc encodes what someone assumed experts do, which is rarely what they actually do.</p>
+    <p class="body-muted">What's missing isn't tooling. It's a defensible answer to a simple question: <strong>according to whom, and how would you know?</strong></p>
+  </section>
+
+  <section class="band">
+    <div class="sec-head">
+      <h2>Method</h2>
+    </div>
+    <ol class="steps">
+      <li><div><h3>Scope the judgment</h3><p>Identify the specific decisions where your agent's output is accepted or rejected, and who does the accepting.</p></div></li>
+      <li><div><h3>Elicit from practitioners</h3><p>Structured think-aloud sessions with working domain experts. They reason through real cases while the criteria they're using get surfaced and recorded.</p></div></li>
+      <li><div><h3>Code the transcripts</h3><p>Reasoning gets turned into a coding scheme, applied independently, and checked for agreement between raters. Disagreement is data — it shows you where quality is genuinely contested.</p></div></li>
+      <li><div><h3>Build the labelled set</h3><p>A validated ground truth set with documented provenance: who judged, on what basis, and how consistently.</p></div></li>
+      <li><div><h3>Hand over the harness</h3><p>Your team runs it. The set is versioned and extendable, so it survives the next model swap.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="band">
+    <div class="sec-head">
+      <h2>Investments &amp; Advisory</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="lede">I write small cheques into AI-native productivity tools where agent UX is the bottleneck — not model quality.</p>
+        <p class="body-muted" style="font-size:14px">These are the companies whose hardest problem is the one I've spent years on at Microsoft: what the agent should show, when it should ask, and how a person stays in control of work they're accountable for.</p>
+      </div>
+      <dl class="stack">
+        <dt>Stage</dt><dd>Pre-seed and seed</dd>
+        <dt>Cheque</dt><dd>€10k–25k</dd>
+        <dt>Terms</dt><dd>Capital only. No advisory shares.</dd>
+        <dt>Geography</dt><dd>Europe and US</dd>
+      </dl>
+    </div>
+    <div class="portfolio">
+      <div class="pf"><b>Acme Intelligence</b><span>Invested</span></div>
+      <div class="pf"><b>Northlight AI</b><span>Advisor</span></div>
+      <div class="pf"><b>Dummy Labs</b><span>Invested</span></div>
+      <div class="pf"><b>Placeholder &amp; Co</b><span>Advisor</span></div>
+      <div class="pf"><b>Sample Systems</b><span>Invested</span></div>
+      <div class="pf"><b>Futureworks</b><span>Advisor</span></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="sec-head">
+      <h2>Things I make</h2>
+    </div>
+    <ul class="linklist">
+      <li><a href="#"><span class="ll-tag">Talk</span><span class="ll-title">Dummy link — a talk I gave somewhere</span><span class="ll-arrow">→</span></a></li>
+      <li><a href="#"><span class="ll-tag">Essay</span><span class="ll-title">Dummy link — something I wrote</span><span class="ll-arrow">→</span></a></li>
+      <li><a href="#"><span class="ll-tag">Project</span><span class="ll-title">Dummy link — a side project</span><span class="ll-arrow">→</span></a></li>
+      <li><a href="#"><span class="ll-tag">Podcast</span><span class="ll-title">Dummy link — an episode I was on</span><span class="ll-arrow">→</span></a></li>
+      <li><a href="#"><span class="ll-tag">More</span><span class="ll-title">Dummy link — future stuff goes here</span><span class="ll-arrow">→</span></a></li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <p class="pitch">Tell me the decision you can't measure. If it isn't something I can help with, I'll say so in the reply.</p>
+    <a class="mail" href="mailto:hello@milesfitzgerald.com">hello@milesfitzgerald.com</a>
+    <ul class="elsewhere">
+      <li><a href="https://www.linkedin.com/in/milesfitzgerald/">LinkedIn</a></li>
+      <li><a href="https://twitter.com/milesfitzgerald">Twitter</a></li>
+      <li><a href="https://medium.com/microsoft-design/opendesignoutlook-7e0f4e591082">Writing</a></li>
+    </ul>
+    <footer>
+      <span>Miles Fitzgerald</span>
+      <span>Design × AI evaluation</span>
+    </footer>
+  </section>
+
+</div>
+
+</body>
+</html>
