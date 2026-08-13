@@ -130,6 +130,17 @@ footer{
   color:var(--faint);
   font-size:14px;
 }
+
+/* JS enhancements — sections rise in; email copy feedback */
+.reveal{
+  opacity:0;transform:translateY(14px);
+  transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);
+}
+.reveal.in{opacity:1;transform:none}
+.copied{color:var(--accent)}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
 </style>
 </head>
 <body>
@@ -192,5 +203,65 @@ footer{
   <footer>Miles Fitzgerald — set in Instrument Sans, hand-built with HTML &amp; CSS.</footer>
 
 </div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // In-page anchors: eased scroll, duration scaled to distance
+  const ease = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      history.pushState(null, '', a.getAttribute('href'));
+      if (reduce) { target.scrollIntoView(); return; }
+      const from = scrollY;
+      const to = target.getBoundingClientRect().top + scrollY - 32;
+      const dur = Math.min(900, 300 + Math.abs(to - from) * .25);
+      let t0;
+      const step = now => {
+        t0 ??= now;
+        const p = Math.min(1, (now - t0) / dur);
+        scrollTo(0, from + (to - from) * ease(p));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  });
+
+  // Sections rise in as they enter the viewport
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      for (const en of entries) if (en.isIntersecting) {
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    }, {rootMargin: '0px 0px -8% 0px'});
+    document.querySelectorAll('section').forEach(s => {
+      s.classList.add('reveal');
+      io.observe(s);
+    });
+  }
+
+  // Click the email to copy it; falls back to mailto
+  const mail = document.querySelector('a[href^="mailto:"]');
+  if (mail && navigator.clipboard) {
+    const original = mail.textContent;
+    mail.addEventListener('click', e => {
+      e.preventDefault();
+      navigator.clipboard.writeText(original).then(() => {
+        mail.textContent = 'copied ✓';
+        mail.classList.add('copied');
+        setTimeout(() => {
+          mail.textContent = original;
+          mail.classList.remove('copied');
+        }, 1600);
+      }).catch(() => { location.href = mail.href; });
+    });
+  }
+})();
+</script>
 </body>
 </html>
