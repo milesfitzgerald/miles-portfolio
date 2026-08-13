@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Miles Fitzgerald</title>
 <meta name="description" content="Miles Fitzgerald — Design Director on Microsoft Excel. AI agents, design direction, and ground truth for AI evaluation.">
-<meta name="theme-color" content="#161616">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#161616" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F2EF" media="(prefers-color-scheme: light)">
 <style>
-/* Quiet dark editorial — serif, muted, headed lists. */
+/* Quiet editorial — muted, headed lists. Self-hosted type, no dependencies. */
+@font-face{
+  font-family:"Instrument Sans";
+  font-style:normal;
+  font-weight:400 600;
+  font-display:swap;
+  src:url(fonts/instrument-sans.woff2) format('woff2');
+}
 :root{
   --bg:#161616;
   --ink:#ECECEA;
@@ -19,7 +24,16 @@
   --underline:#55554F;
   --accent:#1ED760; /* Spotify green */
 }
-::selection{background:var(--accent);color:var(--bg)}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#F2F2EF;
+    --ink:#1A1A18;
+    --muted:#63635E;
+    --faint:#71716B;
+    --underline:#BCBCB5;
+    --accent:#159947; /* darker green for light ground */
+  }
+}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
@@ -43,8 +57,8 @@ a{
   text-decoration-thickness:1px;
   text-underline-offset:4px;
 }
-a:hover{color:var(--accent);text-decoration-color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+a:hover{text-decoration-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--muted);outline-offset:3px}
 
 header h1{
   margin:0;
@@ -104,9 +118,8 @@ li::marker{
 li .tag{
   color:var(--faint);
   font-size:14px;
-  font-style:italic;
 }
-li.soon{color:var(--faint);font-style:italic}
+li.soon{color:var(--faint)}
 .year{
   font-variant-numeric:tabular-nums;
   color:var(--muted);
@@ -116,7 +129,6 @@ footer{
   margin-top:clamp(72px,12vw,120px);
   color:var(--faint);
   font-size:14px;
-  font-style:italic;
 }
 </style>
 </head>
