@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#161616">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* Quiet dark editorial — serif, muted, headed lists. */
 :root{
@@ -24,9 +24,9 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family:"Newsreader",Georgia,serif;
-  font-size:20px;
-  line-height:1.55;
+  font-family:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:15.5px;
+  line-height:1.7;
   font-weight:400;
 }
 .wrap{
@@ -46,32 +46,30 @@ a:focus-visible{outline:2px solid var(--muted);outline-offset:3px}
 
 header h1{
   margin:0;
-  font-size:clamp(34px,5.5vw,44px);
-  font-weight:500;
-  line-height:1.15;
-  letter-spacing:-.01em;
+  font-size:clamp(26px,4.4vw,34px);
+  font-weight:700;
+  line-height:1.2;
 }
 header .byline{
   margin:10px 0 0;
   color:var(--muted);
-  font-size:19px;
+  font-size:14.5px;
 }
 header .intro{
   margin:clamp(40px,7vw,64px) 0 0;
-  font-size:21px;
-  line-height:1.5;
-  max-width:34em;
+  font-size:16.5px;
+  line-height:1.65;
+  max-width:40em;
 }
 
 section{margin-top:clamp(64px,10vw,104px)}
 h2{
   margin:0 0 22px;
-  font-size:clamp(24px,3.6vw,29px);
-  font-weight:500;
-  line-height:1.2;
-  letter-spacing:-.005em;
+  font-size:clamp(17px,2.8vw,21px);
+  font-weight:700;
+  line-height:1.3;
 }
-p{margin:0 0 18px;max-width:34em}
+p{margin:0 0 18px;max-width:40em}
 .muted{color:var(--muted)}
 
 ul{
@@ -89,7 +87,7 @@ li::marker{
 }
 li .tag{
   color:var(--faint);
-  font-size:16px;
+  font-size:13px;
   font-style:italic;
 }
 .year{
@@ -100,7 +98,7 @@ li .tag{
 footer{
   margin-top:clamp(72px,12vw,120px);
   color:var(--faint);
-  font-size:16px;
+  font-size:13px;
   font-style:italic;
 }
 </style>
