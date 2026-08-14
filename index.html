@@ -78,8 +78,8 @@ header .eyebrow{
 }
 header .intro{
   margin:24px 0 0;
-  font-size:19px;
-  line-height:1.6;
+  font-size:clamp(20px,3vw,24px);
+  line-height:1.5;
   max-width:32em;
 }
 header .intro a{white-space:nowrap}
@@ -92,6 +92,10 @@ header .intro a{white-space:nowrap}
 
 section{margin-top:clamp(64px,10vw,104px)}
 #contact{scroll-margin-top:32px}
+#contact a[href^="mailto:"]{
+  font-size:clamp(20px,3vw,24px);
+  font-weight:600;
+}
 h2{
   margin:0 0 20px;
   font-size:clamp(20px,3.2vw,25px);
@@ -185,7 +189,7 @@ footer{
     <p class="muted">Side projects that scratch an itch. Small, shipped, and occasionally useful.</p>
     <ul>
       <li><a href="https://milesfitzgerald.github.io/BlixtSnap/#install">BlixtSnap</a> <span class="tag">a Mac app for screenshots</span></li>
-      <li><a href="https://milesfitzgerald.github.io/essential-mix/">Essential Mix</a> <span class="tag">a Side A/B mix tape</span></li>
+      <li><a href="https://milesfitzgerald.github.io/essential-mix/">Essential Mix</a> <span class="tag">a SoundCloud mixtape for makers looking to flow</span></li>
       <li><a href="https://www.nytimes.com/2015/03/01/nyregion/clocking-your-train.html">NYC subway app</a> <span class="tag">an iOS app for the MTA, featured in The New York Times</span></li>
     </ul>
   </section>
