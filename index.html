@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Miles Fitzgerald</title>
-<meta name="description" content="Miles Fitzgerald — Design Director at Microsoft. AI agents, design direction, and ground truth for AI evaluation.">
+<meta name="description" content="Miles Fitzgerald, Design Director at Microsoft. AI agents, design direction, and ground truth for AI evaluation.">
 <meta name="theme-color" content="#161616" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#F2F2EF" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -125,6 +125,12 @@ li.soon{color:var(--faint)}
   font-variant-numeric:tabular-nums;
   color:var(--muted);
 }
+/* dated rows: the year column replaces both bullet and dash */
+ul.dated{padding-left:0;list-style:none}
+ul.dated li{
+  display:grid;grid-template-columns:clamp(44px,7vw,60px) 1fr;
+  gap:0 16px;padding-left:0;
+}
 
 footer{
   margin-top:clamp(72px,12vw,120px);
@@ -155,13 +161,13 @@ footer{
 
   <section>
     <h2>Work</h2>
-    <p class="muted">Fifteen years seeing how people really work — first from across the table, now at planetary scale.</p>
-    <ul>
-      <li><span class="year">Now</span> — Excel: Design Director, exploring what AI means for a billion+ people and their spreadsheets</li>
-      <li><span class="year">2017</span> — Microsoft: led design for Outlook Mobile on iOS and Android — 100M to 300M+ weekly actives</li>
-      <li><span class="year">2015</span> — Founder: a venture-backed zero-to-one, $1M raised</li>
-      <li><span class="year">2014</span> — Spotify: took music mobile and the brand into its black and green era</li>
-      <li><span class="year">2011</span> — A scrappy startup: small team, users across the table, shipping constantly</li>
+    <p class="muted">Fifteen years seeing how people really work. First from across the table, now at planetary scale.</p>
+    <ul class="dated">
+      <li><span class="year">Now</span><span>Excel: Design Director, exploring what AI means for a billion+ people and their spreadsheets</span></li>
+      <li><span class="year">2017</span><span>Microsoft: led design for Outlook Mobile on iOS and Android, 100M to 300M+ weekly actives</span></li>
+      <li><span class="year">2015</span><span>Founder: a venture-backed zero-to-one, $1M raised</span></li>
+      <li><span class="year">2014</span><span>Spotify: took music mobile and the brand into its black and green era</span></li>
+      <li><span class="year">2011</span><span>A scrappy startup: small team, users across the table, shipping constantly</span></li>
     </ul>
   </section>
 
@@ -169,17 +175,17 @@ footer{
     <h2>Investments &amp; advisory</h2>
     <p class="muted">I write cheques pre-seed and seed into AI-native productivity tools where agent UX is the bottleneck. I want to help entrepreneurs build great businesses.</p>
     <ul>
-      <li><a href="https://www.biscuit.so/">Biscuit</a> <span class="tag">— invested</span></li>
-      <li><a href="https://www.prettydata.co/">Pretty Data</a> <span class="tag">— invested</span></li>
+      <li><a href="https://www.biscuit.so/">Biscuit</a> <span class="tag">invested</span></li>
+      <li><a href="https://www.prettydata.co/">Pretty Data</a> <span class="tag">invested</span></li>
     </ul>
   </section>
 
   <section>
     <h2>Things I make</h2>
-    <p class="muted">Side projects that scratch an itch — small, shipped, and occasionally useful.</p>
+    <p class="muted">Side projects that scratch an itch. Small, shipped, and occasionally useful.</p>
     <ul>
-      <li><a href="https://milesfitzgerald.github.io/BlixtSnap/#install">BlixtSnap — a Mac app for screenshots</a></li>
-      <li><a href="https://milesfitzgerald.github.io/essential-mix/">Essential Mix — a Side A/B mix tape</a></li>
+      <li><a href="https://milesfitzgerald.github.io/BlixtSnap/#install">BlixtSnap</a> <span class="tag">a Mac app for screenshots</span></li>
+      <li><a href="https://milesfitzgerald.github.io/essential-mix/">Essential Mix</a> <span class="tag">a Side A/B mix tape</span></li>
     </ul>
   </section>
 
@@ -195,17 +201,17 @@ footer{
 
   <section>
     <h2>Talks &amp; interviews</h2>
-    <p class="muted">On stages and in interviews — thinking out loud about design and AI.</p>
-    <ul>
-      <li><span class="year">2025</span> — <a href="https://www.linkedin.com/posts/milesfitzgerald_had-a-fantastic-time-speaking-at-the-ai-summit-activity-7384635974347014144-Ixym/">Speaker at the AI Summit, Barcelona</a></li>
-      <li><span class="year">2024</span> — <a href="https://www.instagram.com/reel/C7JxatNs4Pb/">IAAC, technical specialist advisor</a></li>
-      <li><span class="year">2023</span> — <a href="https://spaces.is/loversmagazine/interviews/miles-fitzgerald">Interview with Lovers Magazine</a></li>
+    <p class="muted">On stages and in interviews, thinking out loud about design and AI.</p>
+    <ul class="dated">
+      <li><span class="year">2025</span><span><a href="https://www.linkedin.com/posts/milesfitzgerald_had-a-fantastic-time-speaking-at-the-ai-summit-activity-7384635974347014144-Ixym/">Speaker at the AI Summit, Barcelona</a></span></li>
+      <li><span class="year">2024</span><span><a href="https://www.instagram.com/reel/C7JxatNs4Pb/">IAAC, technical specialist advisor</a></span></li>
+      <li><span class="year">2023</span><span><a href="https://spaces.is/loversmagazine/interviews/miles-fitzgerald">Interview with Lovers Magazine</a></span></li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p class="muted">From angel investment to design questions to career advice — I'm available.</p>
+    <p class="muted">From angel investment to design questions to career advice, I'm available.</p>
     <ul>
       <li><a href="mailto:miles.fitzgerald@gmail.com">miles.fitzgerald@gmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/milesfitzgerald/">LinkedIn</a></li>
@@ -214,7 +220,7 @@ footer{
     </ul>
   </section>
 
-  <footer>Miles Fitzgerald — set in Instrument Sans, hand-built with HTML &amp; CSS.</footer>
+  <footer>Miles Fitzgerald. Set in Instrument Sans, hand-built with HTML &amp; CSS.</footer>
 
 </div>
 
