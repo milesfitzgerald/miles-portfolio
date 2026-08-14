@@ -1,0 +1,48 @@
+# Miles Fitzgerald
+
+> Design Director at Microsoft working on AI agents in Excel. Previously Spotify, Condé Nast and Adobe. Angel investor in AI-native productivity tools, speaker and writer.
+
+Fifteen years crafting software for everyone from the Fortune 500 to folks on the subway.
+
+## Work
+
+- **Now** — Excel: Design Director, exploring what AI means for a billion+ people and their spreadsheets
+- **2017** — Microsoft: led design for Outlook Mobile on iOS and Android, 100M to 300M+ weekly actives
+- **2015** — Founding member: a venture-backed zero-to-one, $1M raised from Chamath Palihapitiya, grew to 100K+ users
+- **2014** — Spotify: helped with mobile and bringing in the black/green era
+- **2011** — A scrappy startup: small team, users across the table, shipping constantly
+
+## Investments & advisory
+
+Writes pre-seed and seed cheques into AI-native productivity tools, then sticks around to help entrepreneurs build great businesses.
+
+- [Biscuit](https://www.biscuit.so/): invested
+- [Pretty Data](https://www.prettydata.co/): invested
+
+## Things I make
+
+- [BlixtSnap](https://milesfitzgerald.github.io/BlixtSnap/#install): a Mac app for screenshots
+- [Essential Mix](https://milesfitzgerald.github.io/essential-mix/): a SoundCloud mixtape for makers looking to flow
+- [NYC subway app](https://www.nytimes.com/2015/03/01/nyregion/clocking-your-train.html): an iOS app for the MTA, featured in The New York Times
+
+## Things I write
+
+- [Thoughts on building a successful remote team](https://medium.com/microsoft-design/opendesignoutlook-7e0f4e591082)
+- [Spotify: what we learned about sprints](https://medium.com/sprint-stories/sprints-things-i-learned-while-doing-them-at-spotify-587ee49b59a1)
+- [How a side project started a conversation about our dear NY subway system](https://medium.com/@milesfitzgerald/staring-dead-eyed-waiting-for-the-subway-1a6760526868)
+
+## Talks & interviews
+
+Open to speaking gigs and interviews, with a focus on AI and software.
+
+- **2025** — [Speaker at the AI Summit, Barcelona](https://www.linkedin.com/posts/milesfitzgerald_had-a-fantastic-time-speaking-at-the-ai-summit-activity-7384635974347014144-Ixym/)
+- **2024** — [IAAC, technical specialist advisor](https://www.instagram.com/reel/C7JxatNs4Pb/)
+- **2023** — [Interview with Lovers Magazine](https://spaces.is/loversmagazine/interviews/miles-fitzgerald)
+
+## Contact
+
+Available for angel investment, design questions and career advice.
+
+- Email: miles.fitzgerald@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/milesfitzgerald/)
+- [GitHub](https://github.com/milesfitzgerald)
