@@ -7,9 +7,9 @@
 <meta name="description" content="Miles Fitzgerald is a Design Director at Microsoft working on AI agents in Excel. Previously Spotify, Condé Nast and Adobe. Angel investor, speaker and writer.">
 <meta name="author" content="Miles Fitzgerald">
 <link rel="canonical" href="https://milesfitzgerald.com/">
-<meta name="theme-color" content="#161616" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#F2F2EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161616">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script>try{if(localStorage.getItem('mf-theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
 
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://milesfitzgerald.com/">
@@ -71,15 +71,14 @@
   --underline:#55554F;
   --accent:#1ED760; /* Spotify green */
 }
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#F2F2EF;
-    --ink:#1A1A18;
-    --muted:#63635E;
-    --faint:#71716B;
-    --underline:#BCBCB5;
-    --accent:#159947; /* darker green for light ground */
-  }
+/* Dark is always the default; light only on explicit request. */
+:root[data-theme="light"]{
+  --bg:#F2F2EF;
+  --ink:#1A1A18;
+  --muted:#63635E;
+  --faint:#71716B;
+  --underline:#BCBCB5;
+  --accent:#159947; /* darker green for light ground */
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -190,8 +189,25 @@ footer{
   color:var(--faint);
   font-size:17px;
 }
+footer .endbar{
+  display:flex;flex-wrap:wrap;align-items:center;
+  justify-content:space-between;gap:14px 28px;
+  margin-top:28px;
+}
+footer .controls{display:flex;align-items:center;gap:14px}
+footer .clock{font-variant-numeric:tabular-nums}
+footer .theme{
+  background:none;border:0;padding:0;
+  color:var(--faint);cursor:pointer;
+  display:inline-flex;align-items:center;
+}
+footer .theme:hover{color:var(--accent)}
+footer .theme:focus-visible{outline:2px solid var(--muted);outline-offset:4px}
+.i-moon{display:none}
+:root[data-theme="light"] .i-sun{display:none}
+:root[data-theme="light"] .i-moon{display:inline}
 footer .mouse{
-  margin:28px 0 0;
+  margin:0;
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   font-size:19px;line-height:1;
   color:var(--faint);
@@ -232,8 +248,8 @@ footer .hint{
     <h2>Work</h2>
     <p class="muted">Fifteen years crafting software for everyone from the Fortune 500 to folks on the subway. I still get a kick out of spotting my work in the wild.</p>
     <ul class="dated">
-      <li><span class="year">Now</span><span>Excel: Design Director, exploring what AI means for a billion+ people and their spreadsheets</span></li>
-      <li><span class="year">2017</span><span>Microsoft: led design for Outlook Mobile on iOS and Android, 100M to 300M+ weekly actives</span></li>
+      <li><span class="year">Now</span><span>Microsoft Excel: Design Director, exploring what AI means for a billion+ people and their spreadsheets</span></li>
+      <li><span class="year">2017</span><span>Microsoft Outlook: led design for mobile on iOS and Android, 100M to 300M+ weekly actives</span></li>
       <li><span class="year">2015</span><span>Founding member: a venture-backed zero-to-one, $1M raised from Chamath Palihapitiya, grew to 100K+ users</span></li>
       <li><span class="year">2014</span><span>Spotify: helped with mobile and bringing in the black/green era</span></li>
       <li><span class="year">2011</span><span>A scrappy startup: small team, users across the table, shipping constantly</span></li>
@@ -292,7 +308,16 @@ footer .hint{
 
   <footer>
     Made with love, Instrument Sans, HTML/CSS, and late-night sessions.
-    <p class="mouse"><a class="nose" href="#top" aria-label="Back to top">&lt;</a>:3 )~~~~ <span class="hint">click the nose</span></p>
+    <div class="endbar">
+      <p class="mouse"><a class="nose" href="#top" aria-label="Back to top">&lt;</a>:3 )~~~~ <span class="hint">click the nose</span></p>
+      <div class="controls">
+        <span class="clock" id="clock"></span>
+        <button class="theme" id="theme" type="button" aria-label="Switch to light mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.5 5.5l1.6 1.6M16.9 16.9l1.6 1.6M18.5 5.5l-1.6 1.6M7.1 16.9l-1.6 1.6"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.9A8.6 8.6 0 0 1 9.1 3.8a8.6 8.6 0 1 0 11.1 11.1z"/></svg>
+        </button>
+      </div>
+    </div>
   </footer>
 
 </div>
@@ -336,6 +361,35 @@ footer .hint{
       s.classList.add('reveal');
       io.observe(s);
     });
+  }
+
+  // Dark by default; light is a deliberate choice, remembered
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('theme');
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const paint = () => {
+    const light = root.dataset.theme === 'light';
+    themeBtn.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+    if (meta) meta.setAttribute('content', light ? '#F2F2EF' : '#161616');
+  };
+  paint();
+  themeBtn.addEventListener('click', () => {
+    const light = root.dataset.theme === 'light';
+    if (light) { delete root.dataset.theme; } else { root.dataset.theme = 'light'; }
+    try { light ? localStorage.removeItem('mf-theme') : localStorage.setItem('mf-theme', 'light'); } catch (e) {}
+    paint();
+  });
+
+  // Barcelona, right now
+  const clock = document.getElementById('clock');
+  if (clock) {
+    const fmt = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Madrid',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+    });
+    const tick = () => { clock.textContent = 'Barcelona ' + fmt.format(new Date()); };
+    tick();
+    setInterval(tick, 1000);
   }
 
   // Click the email to copy it; falls back to mailto
