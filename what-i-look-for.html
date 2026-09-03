@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What I look for in an AI-first product</title>
-<meta name="description" content="Five things Miles Fitzgerald looks for before writing a cheque into an AI-first product: the model as the engine, the second session, honesty about being wrong, taste in the defaults, and a founder who ships weekly.">
+<title>What I look for in AI-first founders</title>
+<meta name="description" content="Five things Miles Fitzgerald looks for before writing a cheque into an AI-first founder: they understand the models, they own the layer between model and product, they treat tokens as a budget, they know their unit cost, and they build with a small team of makers.">
 <meta name="author" content="Miles Fitzgerald">
 <link rel="canonical" href="https://milesfitzgerald.com/what-i-look-for.html">
 <meta name="theme-color" content="#161616">
@@ -13,8 +13,8 @@
 
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://milesfitzgerald.com/what-i-look-for.html">
-<meta property="og:title" content="What I look for in an AI-first product">
-<meta property="og:description" content="Five things I look for before writing a cheque into an AI-first product.">
+<meta property="og:title" content="What I look for in AI-first founders">
+<meta property="og:description" content="Five things I look for before writing a cheque into an AI-first founder.">
 <meta property="og:image" content="https://milesfitzgerald.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -114,26 +114,26 @@ footer p{margin:0 0 14px}
 <div class="wrap">
 
   <p class="eyebrow"><a href="./">Miles Fitzgerald</a></p>
-  <h1>What I look for in an AI-first product</h1>
+  <h1>What I look for in AI-first founders</h1>
 
-  <p class="lede">I've spent fifteen years shipping software to a billion+ people, and the last few putting AI agents into the spreadsheet most of the world's offices run on. Now I write cheques into AI-first products. Founders ask what I look for. Here it is, no deck required.</p>
+  <p class="lede">I've spent fifteen years shipping software to a billion+ people, and the last few putting AI agents into the spreadsheet most of the world's offices run on. Now I write cheques into AI-first companies. The product matters, but at pre-seed I'm really backing the founder. Here's what I look for.</p>
 
-  <h2>1. The model is the engine, not a feature</h2>
-  <p>Strip the AI out. If the product still makes sense, it's a normal product with a chatbot bolted on, and there are a thousand of those. AI-first means the product could not have existed two years ago. The test I use: what does the user stop doing? If the answer is "typing a prompt instead of clicking a button," that's a feature. If the answer is "the whole Tuesday afternoon they used to lose," that's a product.</p>
+  <h2>1. They understand the models</h2>
+  <p>Not the marketing, the models. A founder I back can tell me what the frontier models are good at this quarter, where they fall over, and which of those failures are temporary and which are structural. They know when a small, cheap model is enough and when it isn't. They have evals, not vibes, so when a new model ships they can tell in an afternoon whether it makes their product better. If a founder can't explain why the model gets a task wrong, they can't design around it, and designing around it is the whole job.</p>
 
-  <h2>2. It earns the second session</h2>
-  <p>First sessions are cheap now. A demo can make anything look like magic for ninety seconds. I look at what brings someone back on an ordinary weekday, when there's no one watching and no novelty left. Outlook mobile didn't go from 100M to 300M weekly actives on first impressions. It did it on the mornings after. Show me retention before you show me the demo.</p>
+  <h2>2. They own the layer between the model and the product</h2>
+  <p>The model is rented. Everyone has the same access to it, and it gets swapped out every few months. What a company actually owns is everything between the model and the person using it: the context it's given, the tools it can call, the memory it keeps, the guardrails, the way failure is handled, the interface that makes a probabilistic system feel dependable. That layer is where taste, data, and hard-won product knowledge accumulate, and it's what survives a model change. Founders who treat the model as the product build a thin wrapper. Founders who treat the layer as the product build a company.</p>
 
-  <h2>3. It's honest about being wrong</h2>
-  <p>Models fail, and the products I back know it. They show their confidence instead of faking it, make undo cheap, and keep the person's hand on the wheel for anything that matters. In Excel, a wrong number is somebody's budget. The more powerful the model, the more the product has to be built around the moment it's wrong, because that's the moment trust is won or lost.</p>
+  <h2>3. They treat tokens as a budget</h2>
+  <p>Every token costs money and time, and the founders I trust are stingy with both. They know what's in their context window and why. They cache what repeats, route easy requests to cheaper models, trim what the model doesn't need, and measure latency the way a mobile team measures cold start. Outlook mobile went from 100M to 300M weekly actives partly because we treated every millisecond as a cost the user paid. Tokens are the new milliseconds. A founder who can't tell me their tokens per task hasn't looked.</p>
 
-  <h2>4. Taste shows in the defaults</h2>
-  <p>When the model can do anything, the product is the choices it makes for you. What it shows first, what it hides, what it refuses to ask. At Spotify, personalization worked because someone made hard choices about what not to show. A founder with taste has opinions about the defaults and can tell me why. A founder without it ships a text box and calls it flexibility.</p>
+  <h2>4. They know what a user costs</h2>
+  <p>A demo that costs four dollars a session is not a product, it's a fundraising prop. I want to see inference cost per user against what that user pays, today, and a credible line for how that gap closes: through the layer above, through cheaper models, through pricing, or through all three. Gross margin isn't a Series B conversation anymore. In AI-first companies it's a design decision, made in the first month, and it shows up in every product choice after that.</p>
 
-  <h2>5. A founder who ships weekly and talks to users daily</h2>
-  <p>The model landscape will change under your feet every quarter. The only durable advantage at pre-seed is speed of learning. I want to see last week's change and hear about the user who asked for it. If the last release was a month ago and the last user conversation was longer, I'm going to worry more about that than about the market size slide.</p>
+  <h2>5. They build with a small team of makers</h2>
+  <p>The best AI-first teams I've seen are three to six people who each design, build, and ship, with the models doing the work that used to need a department. No hand-offs, no layers of management, no roadmap theatre. A small team of makers learns faster than a large team of specialists, and speed of learning is the only durable advantage at this stage. I want to see last week's release and hear about the user who asked for it. If the plan is to hire twenty people before finding the product, I'm the wrong investor.</p>
 
-  <p>If that sounds like the product you're building, <a href="./#contact">send me your deck</a>.</p>
+  <p>If that sounds like you, <a href="./#contact">send me your deck</a>.</p>
 
   <footer>
     <p><a href="./">Back to the front page</a></p>
