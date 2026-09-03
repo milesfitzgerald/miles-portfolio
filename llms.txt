@@ -43,7 +43,7 @@ Talks about what it takes to ship AI to a billion+ people, and what early-stage 
 
 ## Contact
 
-Founders first, but design questions are always welcome.
+Founders first, but design/product questions are always welcome.
 
 - Email: miles.fitzgerald@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/milesfitzgerald/)
