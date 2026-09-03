@@ -54,7 +54,7 @@ body{
   color:var(--ink);
   font-family:"Untitled Sans","Instrument Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
   font-size:17px;
-  line-height:1.6;
+  line-height:1.65;
   font-weight:400;
 }
 .wrap{
@@ -90,24 +90,36 @@ h1{
   max-width:18em;
 }
 h2{
-  margin:56px 0 14px;
-  font-size:clamp(20px,3.2vw,25px);
+  margin:42px 0 14px;
+  font-size:clamp(20px,3.2vw,24px);
   font-weight:600;
   line-height:1.25;
   letter-spacing:-.01em;
+  max-width:22em;
 }
-p{margin:0 0 28px;max-width:36em}
+h2 .num{
+  color:var(--muted);
+  font-variant-numeric:tabular-nums;
+  margin-right:.15em;
+}
+p{margin:0 0 28px;max-width:34em}
 .lede{
-  font-size:clamp(20px,3vw,24px);
+  font-size:clamp(18px,2.4vw,20px);
   line-height:1.5;
-  max-width:32em;
+  max-width:30em;
+}
+.outro{
+  margin-top:56px;
+  font-size:clamp(18px,2.4vw,20px);
+  line-height:1.5;
+  max-width:30em;
 }
 .muted{color:var(--muted)}
 footer{
-  margin-top:clamp(56px,10vw,112px);
+  margin-top:56px;
   color:var(--faint);
 }
-footer p{margin:0 0 14px}
+footer p{margin:0}
 </style>
 </head>
 <body>
@@ -118,22 +130,22 @@ footer p{margin:0 0 14px}
 
   <p class="lede">I've spent fifteen years shipping software to a billion+ people, and the last few putting AI agents into the spreadsheet most of the world's offices run on. Now I write cheques into AI-first companies. The product matters, but at pre-seed I'm really backing the founder. Here's what I look for.</p>
 
-  <h2>1. They understand the models</h2>
+  <h2><span class="num">1.</span> They understand the models</h2>
   <p>Not the marketing, the models. A founder I back can tell me what the frontier models are good at this quarter, where they fall over, and which of those failures are temporary and which are structural. They know when a small, cheap model is enough and when it isn't. They have evals, not vibes, so when a new model ships they can tell in an afternoon whether it makes their product better. If a founder can't explain why the model gets a task wrong, they can't design around it, and designing around it is the whole job.</p>
 
-  <h2>2. They own the layer between the model and the product</h2>
+  <h2><span class="num">2.</span> They own the layer between the model and the product</h2>
   <p>The model is rented. Everyone has the same access to it, and it gets swapped out every few months. What a company actually owns is everything between the model and the person using it: the context it's given, the tools it can call, the memory it keeps, the guardrails, the way failure is handled, the interface that makes a probabilistic system feel dependable. That layer is where taste, data, and hard-won product knowledge accumulate, and it's what survives a model change. Founders who treat the model as the product build a thin wrapper. Founders who treat the layer as the product build a company.</p>
 
-  <h2>3. They treat tokens as a budget</h2>
+  <h2><span class="num">3.</span> They treat tokens as a budget</h2>
   <p>Every token costs money and time, and the founders I trust are stingy with both. They know what's in their context window and why. They cache what repeats, route easy requests to cheaper models, trim what the model doesn't need, and measure latency the way a mobile team measures cold start. Outlook mobile went from 100M to 300M weekly actives partly because we treated every millisecond as a cost the user paid. Tokens are the new milliseconds. A founder who can't tell me their tokens per task hasn't looked.</p>
 
-  <h2>4. They know what a user costs</h2>
+  <h2><span class="num">4.</span> They know what a user costs</h2>
   <p>A prototype that costs four dollars a session is not a product, it's a fundraising prop. I want to see inference cost per user against what that user pays, today, and a credible line for how that gap closes: through the layer above, through cheaper models, through pricing, or through all three. Gross margin isn't a Series B conversation anymore. In AI-first companies it's a design decision, made in the first month, and it shows up in every product choice after that.</p>
 
-  <h2>5. They build with a small team of makers</h2>
+  <h2><span class="num">5.</span> They build with a small team of makers</h2>
   <p>The best AI-first teams I've seen are three to six people who each design, build, and ship, with the models doing the work that used to need a department. No hand-offs, no layers of management, no roadmap theatre. A small team of makers learns faster than a large team of specialists, and speed of learning is the only durable advantage at this stage. I want to see last week's release and hear about the user who asked for it. If the plan is to hire twenty people before finding the product, I'm the wrong investor.</p>
 
-  <p>If that sounds like you, <a href="./#contact">send me your demo</a>.</p>
+  <p class="outro">If that sounds like you, <a href="./#contact">send me your demo</a>.</p>
 
   <footer>
     <p><a href="./">Back to the front page</a></p>
