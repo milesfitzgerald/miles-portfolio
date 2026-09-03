@@ -35,7 +35,7 @@ Writes $25k+ pre-seed and seed cheques into AI-first products, and a network of 
 
 ## Talks & interviews
 
-Open to speaking gigs and interviews, with a focus on AI and software.
+Talks about what it takes to ship AI to a billion+ people, and what early-stage teams can steal from it. Open to conferences, podcasts, and press.
 
 - **2025** — [Speaker at the AI Summit, Barcelona](https://www.linkedin.com/posts/milesfitzgerald_had-a-fantastic-time-speaking-at-the-ai-summit-activity-7384635974347014144-Ixym/)
 - **2024** — [IAAC, technical specialist advisor](https://www.instagram.com/reel/C7JxatNs4Pb/)
