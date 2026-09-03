@@ -10,8 +10,8 @@ Writes $25k+ pre-seed and seed cheques into AI-first products, and a network of 
 
 - [What I look for in AI-first founders](https://milesfitzgerald.com/what-i-look-for.html)
 - Send him your deck: miles.fitzgerald@gmail.com
-- [Biscuit](https://www.biscuit.so/): build and run a business from a prompt, invested
-- [Pretty Data](https://www.prettydata.co/): AI revenue tools for SMB, invested
+- Invested: [Biscuit](https://www.biscuit.so/), build and run a business from a prompt
+- Invested: [Pretty Data](https://www.prettydata.co/), AI revenue tools for SMB
 
 ## Work
 
