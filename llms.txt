@@ -6,12 +6,13 @@ Fifteen years crafting software for everyone from the Fortune 500 to folks on th
 
 ## Investments & advisory
 
-Writes $25k+ pre-seed and seed cheques into AI-first products, and a network of investors follows. Then sticks around: design/product reviews, a first design/product hire, and a zero-to-one product leader who has shipped at billion scale. Most angels bring a cheque. Miles brings fifteen years of shipping and a seat at the table.
+Writes $25k+ pre-seed and seed cheques into AI-first products, and brings other angels in. Then sticks around: product and design reviews, a first product or design hire, and a zero-to-one product leader who has shipped at billion scale. Most angels bring a cheque. Miles brings fifteen years of shipping and a seat at the table.
 
 - [What I look for in AI-first founders](https://milesfitzgerald.com/what-i-look-for.html)
-- Send him your demo: miles.fitzgerald@gmail.com
 - Invested: [Biscuit](https://www.biscuit.so/), build and run a business from a prompt
 - Invested: [Pretty Data](https://www.prettydata.co/), AI revenue tools for SMB
+- Advised: [IAAC](https://www.instagram.com/reel/C7JxatNs4Pb/), technical specialist advisor
+- Send him your demo: miles.fitzgerald@gmail.com
 
 ## Work
 
@@ -38,12 +39,11 @@ Writes $25k+ pre-seed and seed cheques into AI-first products, and a network of 
 Talks about what it takes to ship AI to a billion+ people, and what early-stage teams can steal from it. Open to conferences, podcasts, and press.
 
 - **2025** — [Speaker at the AI Summit, Barcelona](https://www.linkedin.com/posts/milesfitzgerald_had-a-fantastic-time-speaking-at-the-ai-summit-activity-7384635974347014144-Ixym/)
-- **2024** — [IAAC, technical specialist advisor](https://www.instagram.com/reel/C7JxatNs4Pb/)
 - **2023** — [Interview with Lovers Magazine](https://spaces.is/loversmagazine/interviews/miles-fitzgerald)
 
 ## Contact
 
-Founders first, but design questions are always welcome.
+Founders first, but product and design questions are always welcome. Barcelona-based, working PST hours.
 
 - Email: miles.fitzgerald@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/milesfitzgerald/)
