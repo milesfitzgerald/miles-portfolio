@@ -6,17 +6,17 @@ Fifteen years crafting software for everyone from the Fortune 500 to folks on th
 
 ## Investments & advisory
 
-Writes $25k+ pre-seed and seed cheques into AI-first tools, with a network of investors who invest alongside him. Then sticks around: design reviews, help hiring a first designer, and a zero-to-one product leader who has shipped at billion scale. Most angels bring a cheque. Miles brings fifteen years of shipping, more cheques, and a seat at the table. Send him your deck: miles.fitzgerald@gmail.com
+Writes $25k+ pre-seed and seed cheques into AI-first products, and a network of investors follows. Then sticks around: design reviews, a first design hire, and a zero-to-one product leader who has shipped at billion scale. Most angels bring a cheque. Miles brings fifteen years of shipping and a seat at the table. Send him your deck: miles.fitzgerald@gmail.com
 
-- [Biscuit](https://www.biscuit.so/): invested
-- [Pretty Data](https://www.prettydata.co/): invested
+- [Biscuit](https://www.biscuit.so/): build and run a business from a prompt, invested
+- [Pretty Data](https://www.prettydata.co/): AI revenue tools for salons and spas, invested
 
 ## Work
 
 - **Now** — Microsoft Excel: Design Director, shipping AI agents to a billion+ people and their spreadsheets
 - **2017** — Microsoft Outlook: led design for mobile on iOS and Android, took it from 100M to 300M+ weekly active users around the world
 - **2015** — RogerTalk: founding member of a venture-backed zero-to-one, $1M raised from Chamath Palihapitiya, grew to 100K+ users
-- **2014** — Spotify: helped grow mobile to millions and usher in the black/green era. Personalization went on to take it from $6B to $19B
+- **2014** — Spotify: helped grow mobile to millions and usher in the black/green era, in the run-up to personalization taking it from $6B to $19B
 - **2011** — The Cools: a fashion marketplace with 50K users, LVMH's Antoine Arnault advising and the fashion press watching
 
 ## Things I make
@@ -27,6 +27,7 @@ Writes $25k+ pre-seed and seed cheques into AI-first tools, with a network of in
 
 ## Things I write
 
+- [What I look for in an AI-first product](https://milesfitzgerald.com/what-i-look-for.html)
 - [Thoughts on building a successful remote team](https://medium.com/microsoft-design/opendesignoutlook-7e0f4e591082)
 - [Spotify: what we learned about sprints](https://medium.com/sprint-stories/sprints-things-i-learned-while-doing-them-at-spotify-587ee49b59a1)
 - [How a side project started a conversation about our dear NY subway system](https://medium.com/@milesfitzgerald/staring-dead-eyed-waiting-for-the-subway-1a6760526868)
