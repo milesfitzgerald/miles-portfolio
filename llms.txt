@@ -6,8 +6,10 @@ Fifteen years crafting software for everyone from the Fortune 500 to folks on th
 
 ## Investments & advisory
 
-Writes $25k+ pre-seed and seed cheques into AI-first products, and a network of investors follows. Then sticks around: design reviews, a first design hire, and a zero-to-one product leader who has shipped at billion scale. Most angels bring a cheque. Miles brings fifteen years of shipping and a seat at the table. He wrote up [what he looks for in AI-first founders](https://milesfitzgerald.com/what-i-look-for.html). Send him your deck: miles.fitzgerald@gmail.com
+Writes $25k+ pre-seed and seed cheques into AI-first products, and a network of investors follows. Then sticks around: design reviews, a first design hire, and a zero-to-one product leader who has shipped at billion scale. Most angels bring a cheque. Miles brings fifteen years of shipping and a seat at the table.
 
+- [What I look for in AI-first founders](https://milesfitzgerald.com/what-i-look-for.html)
+- Send him your deck: miles.fitzgerald@gmail.com
 - [Biscuit](https://www.biscuit.so/): build and run a business from a prompt, invested
 - [Pretty Data](https://www.prettydata.co/): AI revenue tools for SMB, invested
 
