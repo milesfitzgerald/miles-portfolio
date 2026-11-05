@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Miles Fitzgerald, product leader and angel investor for AI-first startups</title>
-<meta name="description" content="Product leader and angel investor helping early-stage founders build AI-first products people love to use. Design Director at Microsoft, based in Barcelona.">
+<meta name="description" content="Product leader and angel investor helping early-stage founders build AI-first products people love to use. Design Director at Microsoft leading product and design for AI agents in Excel, based in Barcelona.">
 <meta name="author" content="Miles Fitzgerald">
 <link rel="canonical" href="https://milesfitzgerald.com/">
 <meta name="theme-color" content="#161616">
@@ -33,7 +33,7 @@
   "url": "https://milesfitzgerald.com/",
   "image": "https://milesfitzgerald.com/og.png?v=2",
   "jobTitle": "Design Director",
-  "description": "Product leader and angel investor helping early-stage founders build AI-first products people love to use. Design Director at Microsoft working on AI agents in Excel, based in Barcelona. Previously Spotify, Condé Nast and Adobe. Speaker and writer.",
+  "description": "Product leader and angel investor helping early-stage founders build AI-first products people love to use. Design Director at Microsoft leading product and design for AI agents in Excel, based in Barcelona. Previously Spotify, Condé Nast and Adobe. Speaker and writer.",
   "worksFor": {
     "@type": "Organization",
     "name": "Microsoft",
@@ -135,6 +135,12 @@ header .intro{
   font-size:clamp(20px,3vw,24px);
   line-height:1.5;
   max-width:32em;
+}
+header .cta{margin:20px 0 0;font-size:17px}
+header .cta a::after{content:" →";color:var(--accent)}
+.callout{
+  border-left:2px solid var(--accent);
+  padding-left:16px;
 }
 section{margin-top:clamp(56px,10vw,112px)}
 #contact{scroll-margin-top:32px}
@@ -243,13 +249,39 @@ footer .hint{
     <p class="eyebrow">Product leader &amp; angel investor</p>
     <h1>Miles Fitzgerald</h1>
     <p class="intro">I help early-stage founders build AI-first products people love to use, and I build software for a billion+ people at Microsoft 💚</p>
+    <p class="cta"><a href="/what-i-look-for">What I look for in AI-first founders</a></p>
   </header>
 
   <section>
-    <h2>Investments &amp; advisory</h2>
-    <p class="muted">I write $25k+ pre-seed and seed cheques into AI-first products, and I bring other angels in. Then I stick around: product and design reviews, your first product or design hire, and a zero-to-one product leader who has shipped at billion scale. Most angels bring a cheque. I bring fifteen years of shipping and a seat at the table.</p>
+    <h2>Work</h2>
+    <p class="muted">Fifteen years crafting software for everyone from the Fortune 500 to folks on the subway. I still get a kick out of spotting my work in the wild.</p>
+    <ul class="dated">
+      <li><span class="year">2026</span><span>Microsoft Excel: Design Director, leading product and design for the AI agents shipping to a billion+ people and their spreadsheets</span></li>
+      <li><span class="year">2017</span><span>Microsoft Outlook: led design for mobile on iOS and Android, took it from 100M to 300M+ weekly active users around the world. <a href="/outlook-case-study">Read the case study</a></span></li>
+      <li><span class="year">2015</span><span>RogerTalk: founding member of a venture-backed zero-to-one, $1M raised from Chamath Palihapitiya, grew to 100K+ users</span></li>
+      <li><span class="year">2014</span><span>Spotify: helped grow mobile to millions and usher in the black/green era, in the run-up to personalization taking it from $6B to $19B</span></li>
+      <li><span class="year">2011</span><span>The Cools: a fashion marketplace with 50K users, LVMH's Antoine Arnault advising and the fashion press watching</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Writing</h2>
+    <p class="muted">Essays on building AI products, shipping at scale, and why software feels the way it does.</p>
     <ul>
-      <li><a href="what-i-look-for.html">What I look for in AI-first founders</a></li>
+      <li><a href="/excel-agents">What I've learned shipping AI agents in Excel</a></li>
+      <li><a href="/what-i-look-for">What I look for in AI-first founders</a></li>
+      <li><a href="/outlook-case-study">Outlook mobile: from 100M to 300M weekly users</a></li>
+      <li><a href="https://medium.com/microsoft-design/opendesignoutlook-7e0f4e591082">Thoughts on building a successful remote team</a></li>
+      <li><a href="https://medium.com/@milesfitzgerald/staring-dead-eyed-waiting-for-the-subway-1a6760526868">How a side project started a conversation about our dear NY subway system</a></li>
+      <li><a href="https://medium.com/sprint-stories/sprints-things-i-learned-while-doing-them-at-spotify-587ee49b59a1">Spotify: what we learned about sprints</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Investments &amp; advisory</h2>
+    <p class="muted">I started angel investing in 2025. Two cheques so far, both into AI-first products, at $25k+ pre-seed and seed, and I bring other angels in. Then I stick around: product and design reviews, your first product or design hire, and a zero-to-one product leader who has shipped at billion scale.</p>
+    <p class="callout">I'm backing the founder more than the product. The five things I check, in order, are in <a href="/what-i-look-for">What I look for in AI-first founders</a>.</p>
+    <ul>
       <li><span class="tag">Invested</span> <a href="https://www.biscuit.so/">Biscuit</a> <span class="tag">build and run a business from a prompt</span></li>
       <li><span class="tag">Invested</span> <a href="https://www.prettydata.co/">Pretty Data</a> <span class="tag">AI revenue tools for SMB</span></li>
       <li><span class="tag">Advised</span> <a href="https://www.instagram.com/reel/C7JxatNs4Pb/">Institute for Advanced Architecture</a> <span class="tag">as technical specialist</span></li>
@@ -258,20 +290,9 @@ footer .hint{
   </section>
 
   <section>
-    <h2>Work</h2>
-    <p class="muted">Fifteen years crafting software for everyone from the Fortune 500 to folks on the subway. I still get a kick out of spotting my work in the wild.</p>
-    <ul class="dated">
-      <li><span class="year">2026</span><span>Microsoft Excel: Design Director, shipping AI agents to a billion+ people and their spreadsheets</span></li>
-      <li><span class="year">2017</span><span>Microsoft Outlook: led design for mobile on iOS and Android, took it from 100M to 300M+ weekly active users around the world</span></li>
-      <li><span class="year">2015</span><span>RogerTalk: founding member of a venture-backed zero-to-one, $1M raised from Chamath Palihapitiya, grew to 100K+ users</span></li>
-      <li><span class="year">2014</span><span>Spotify: helped grow mobile to millions and usher in the black/green era, in the run-up to personalization taking it from $6B to $19B</span></li>
-      <li><span class="year">2011</span><span>The Cools: a fashion marketplace with 50K users, LVMH's Antoine Arnault advising and the fashion press watching</span></li>
-    </ul>
-  </section>
-
-  <section>
     <h2>Things I make</h2>
     <p class="muted">Side projects that scratch an itch. Small, shipped, and occasionally useful.</p>
+    <!-- CHECK: add newer side projects (iOS apps etc.) here, newest first -->
     <ul>
       <li><a href="https://milesfitzgerald.github.io/BlixtSnap/#install">BlixtSnap</a> <span class="tag">a Mac app for screenshots</span></li>
       <li><a href="https://milesfitzgerald.github.io/essential-mix/">Essential Mix</a> <span class="tag">a SoundCloud mixtape for makers looking to flow</span></li>
@@ -280,18 +301,9 @@ footer .hint{
   </section>
 
   <section>
-    <h2>Things I write</h2>
-    <p class="muted">Occasional essays on design, teams, and why software feels the way it does.</p>
-    <ul>
-      <li><a href="https://medium.com/microsoft-design/opendesignoutlook-7e0f4e591082">Thoughts on building a successful remote team</a></li>
-      <li><a href="https://medium.com/sprint-stories/sprints-things-i-learned-while-doing-them-at-spotify-587ee49b59a1">Spotify: what we learned about sprints</a></li>
-      <li><a href="https://medium.com/@milesfitzgerald/staring-dead-eyed-waiting-for-the-subway-1a6760526868">How a side project started a conversation about our dear NY subway system</a></li>
-    </ul>
-  </section>
-
-  <section>
     <h2>Talks &amp; interviews</h2>
-    <p class="muted">I talk about what it takes to ship AI to a billion+ people, and what early-stage teams can steal from it. Open to conferences, podcasts, and press.</p>
+    <p class="muted">I talk about what it takes to ship AI to a billion+ people, and what early-stage teams can steal from it. I'm saying yes to more conferences, podcasts, and press. <a href="#contact">Get in touch</a>.</p>
+    <!-- CHECK: add newer talks, podcasts and interviews here -->
     <ul class="dated">
       <li><span class="year">2025</span><span><a href="https://www.linkedin.com/posts/milesfitzgerald_had-a-fantastic-time-speaking-at-the-ai-summit-activity-7384635974347014144-Ixym/">Speaker at the AI Summit, Barcelona</a></span></li>
       <li><span class="year">2023</span><span><a href="https://spaces.is/loversmagazine/interviews/miles-fitzgerald">Interview with Lovers Magazine</a></span></li>
@@ -300,9 +312,9 @@ footer .hint{
 
   <section id="contact">
     <h2>Contact</h2>
-    <p class="muted">Founders first, but product and design questions are always welcome. Barcelona-based, working PST hours.</p>
+    <p class="muted">Founders first, but product and design questions are always welcome. Barcelona-based, happy to talk across time zones.</p>
     <ul>
-      <li><a href="mailto:miles.fitzgerald@gmail.com">miles.fitzgerald@gmail.com</a></li>
+      <li><a href="mailto:miles-pitch@agentmail.to">miles-pitch@agentmail.to</a></li>
       <li><a href="https://www.linkedin.com/in/milesfitzgerald/">LinkedIn</a></li>
       <li class="tie" aria-hidden="true">~~~~</li>
       <li><a href="https://github.com/milesfitzgerald">GitHub</a></li>
