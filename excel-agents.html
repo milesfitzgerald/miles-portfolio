@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What I've learned shipping AI agents in Excel</title>
+<meta name="description" content="Five lessons from shipping AI agents to a billion+ Excel users that early-stage AI teams can use: the grid is the context, show the work, make every action undoable, evals before demos, and treat latency as design.">
+<meta name="author" content="Miles Fitzgerald">
+<link rel="canonical" href="https://milesfitzgerald.com/excel-agents">
+<meta name="theme-color" content="#161616">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script>try{if(localStorage.getItem('mf-theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://milesfitzgerald.com/excel-agents">
+<meta property="og:title" content="What I've learned shipping AI agents in Excel">
+<meta property="og:description" content="Five lessons from shipping AI agents to a billion+ people and their spreadsheets.">
+<meta property="og:image" content="https://milesfitzgerald.com/og.png?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Miles Fitzgerald">
+<meta property="article:published_time" content="2026-11-05">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@milesfitzgerald">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What I've learned shipping AI agents in Excel",
+  "description": "Five lessons from shipping AI agents to a billion+ Excel users that early-stage AI teams can use: the grid is the context, show the work, make every action undoable, evals before demos, and treat latency as design.",
+  "datePublished": "2026-11-05",
+  "author": {
+    "@type": "Person",
+    "name": "Miles Fitzgerald",
+    "url": "https://milesfitzgerald.com/"
+  },
+  "image": "https://milesfitzgerald.com/og.png?v=2",
+  "mainEntityOfPage": "https://milesfitzgerald.com/excel-agents"
+}
+</script>
+<style>
+@font-face{
+  font-family:"Instrument Sans";
+  font-style:normal;
+  font-weight:400 600;
+  font-display:swap;
+  src:url(/fonts/instrument-sans.woff2) format('woff2');
+}
+:root{
+  --bg:#161616;
+  --ink:#ECECEA;
+  --muted:#9A9A96;
+  --faint:#8A8A84;
+  --underline:#55554F;
+  --accent:#1ED760;
+}
+:root[data-theme="light"]{
+  --bg:#F2F2EF;
+  --ink:#1A1A18;
+  --muted:#63635E;
+  --faint:#71716B;
+  --underline:#BCBCB5;
+  --accent:#159947;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Untitled Sans","Instrument Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  font-weight:400;
+}
+.wrap{
+  max-width:720px;
+  margin:0 auto;
+  padding:clamp(56px,10vw,112px) clamp(22px,5vw,40px) 84px;
+}
+a{
+  color:var(--ink);
+  text-decoration:underline;
+  text-decoration-color:var(--underline);
+  text-decoration-thickness:1px;
+  text-underline-offset:4px;
+}
+a:hover{text-decoration-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--muted);outline-offset:3px}
+.eyebrow{
+  margin:0 0 14px;
+  color:var(--faint);
+  font-size:17px;
+  line-height:1.5;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.eyebrow a{text-decoration:none;color:var(--faint)}
+.eyebrow a:hover{color:var(--accent)}
+h1{
+  margin:0 0 28px;
+  font-size:clamp(30px,5vw,40px);
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:-.015em;
+  max-width:18em;
+}
+h2{
+  margin:42px 0 14px;
+  font-size:clamp(20px,3.2vw,24px);
+  font-weight:600;
+  line-height:1.25;
+  letter-spacing:-.01em;
+  max-width:22em;
+}
+h2 .num{
+  color:var(--muted);
+  font-variant-numeric:tabular-nums;
+  margin-right:.15em;
+}
+p{margin:0 0 28px;max-width:34em}
+.lede{
+  font-size:clamp(18px,2.4vw,20px);
+  line-height:1.5;
+  max-width:30em;
+}
+.outro{
+  margin-top:56px;
+  font-size:clamp(18px,2.4vw,20px);
+  line-height:1.5;
+  max-width:30em;
+}
+.muted{color:var(--muted)}
+footer{
+  margin-top:56px;
+  color:var(--faint);
+}
+footer p{margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- DRAFT: drafted by Claude from facts already on the site. Review every claim, especially the CHECK notes, before merging. -->
+  <p class="eyebrow"><a href="/">Miles Fitzgerald</a></p>
+  <h1>What I've learned shipping AI agents in Excel</h1>
+  <p class="lede">For the past stretch I've been leading design for the AI agents going into Microsoft Excel. A spreadsheet is the most unforgiving place I know to ship a probabilistic system: people run payrolls, forecasts and whole businesses on it, and a wrong number looks exactly like a right one. Here's what that has taught me, and what I think a five-person AI-first team can take from it.</p>
+
+  <!-- CHECK: Confirm this matches how you'd describe the work publicly, and that nothing here is confidential. -->
+  <h2><span class="num">1.</span> The grid is the context</h2>
+  <p>An agent is only as good as what it can see. In Excel, that's not the prompt, it's the workbook: the tables, the names, the formulas, the half-finished tab someone abandoned last quarter. Most of the work that made our agents better wasn't the model, it was deciding what the agent gets to look at and how it's described to it. If you're building an AI-first product, your equivalent of the grid is the real advantage. Spend your design time there.</p>
+
+  <h2><span class="num">2.</span> Show the work, or nobody trusts it</h2>
+  <p>When an agent edits a model someone has spent a year building, the first question isn't "is this smart?", it's "what did you just touch?" Trust came from making the agent's work legible: which cells changed, which formulas it wrote, what it assumed. An answer people can check beats a cleverer answer they can't. Founders tend to hide the machinery to make the product feel magic. In anything that matters, the machinery is the product.</p>
+
+  <h2><span class="num">3.</span> Make every action undoable</h2>
+  <p>People will only hand real work to an agent if they can take it back. Undo isn't a nice-to-have bolted on at the end, it's what makes people willing to try in the first place. Design the reversible path before the clever one, and you'll find people let the agent do far more.</p>
+
+  <!-- CHECK: Add a real (shareable) example or number about how evals are run, if you can. -->
+  <h2><span class="num">4.</span> Evals before demos</h2>
+  <p>A demo shows the agent on its best day. An eval shows it on an average Tuesday, across thousands of real tasks. At billion scale every edge case exists somewhere, so we judge changes against the messy middle, not the showcase. You don't need a big team for this. A few hundred real tasks and an honest score will tell you more than any demo, and they'll tell you in an afternoon whether a new model is worth switching to.</p>
+
+  <h2><span class="num">5.</span> Latency is a design decision</h2>
+  <p>Mobile taught me that every millisecond is a cost the user pays. Agents make that bill much bigger. Waiting thirty seconds for an answer is fine if you can see progress and keep working, and unbearable if you're staring at a spinner. What the agent does first, what it streams, and when it hands control back are design choices, not engineering details. Tokens are the new milliseconds.</p>
+
+  <p class="outro">This is the thinking I bring to the founders I back. If you're building something AI-first, <a href="/what-i-look-for">here's what I look for</a>, or <a href="/#contact">send me your demo</a>.</p>
+
+  <footer>
+    <p><a href="/">Back to the front page</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
