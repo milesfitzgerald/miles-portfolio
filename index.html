@@ -313,8 +313,9 @@ footer .hint{
   <section id="contact">
     <h2>Contact</h2>
     <p class="muted">Founders first, but product and design questions are always welcome. Barcelona-based, happy to talk across time zones.</p>
+    <p class="callout">Pitching? Include a link to something I can try (a URL, TestFlight or a Loom), and put "squeak" in the subject so I know a human read this.</p>
     <ul>
-      <li><a href="mailto:miles-pitch@agentmail.to">miles-pitch@agentmail.to</a></li>
+      <li><a id="email" href="#contact" data-u="miles-pitch" data-d="agentmail.to">Email me</a><noscript> (turn on JavaScript to see the address, or reach me on LinkedIn)</noscript></li>
       <li><a href="https://www.linkedin.com/in/milesfitzgerald/">LinkedIn</a></li>
       <li class="tie" aria-hidden="true">~~~~</li>
       <li><a href="https://github.com/milesfitzgerald">GitHub</a></li>
@@ -340,6 +341,14 @@ footer .hint{
 <script>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Assemble the email address at runtime so it isn't in the HTML for scrapers
+  const email = document.getElementById('email');
+  if (email) {
+    const addr = email.dataset.u + '@' + email.dataset.d;
+    email.href = 'mailto:' + addr;
+    email.textContent = addr;
+  }
 
   // In-page anchors: eased scroll, duration scaled to distance
   const ease = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
