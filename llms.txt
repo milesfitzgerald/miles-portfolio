@@ -29,7 +29,7 @@ Started angel investing in 2025. Two cheques so far, both into AI-first products
 - Invested: [Biscuit](https://www.biscuit.so/), build and run a business from a prompt
 - Invested: [Pretty Data](https://www.prettydata.co/), AI revenue tools for SMB
 - Advised: [Institute for Advanced Architecture](https://www.instagram.com/reel/C7JxatNs4Pb/), as technical specialist
-- Send him your demo: miles-pitch@agentmail.to
+- Founders can send a demo via the contact section at https://milesfitzgerald.com/#contact
 
 ## Things I make
 
@@ -48,6 +48,6 @@ Talks about what it takes to ship AI to a billion+ people, and what early-stage 
 
 Founders first, but product and design questions are always welcome. Barcelona-based, happy to talk across time zones.
 
-- Email: miles-pitch@agentmail.to
+- [Contact](https://milesfitzgerald.com/#contact)
 - [LinkedIn](https://www.linkedin.com/in/milesfitzgerald/)
 - [GitHub](https://github.com/milesfitzgerald)
